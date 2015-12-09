@@ -8,12 +8,11 @@
 (setq-default buffer-file-coding-system 'utf-8-unix)
 (global-auto-revert-mode t)
 (add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
+(global-hl-line-mode 1)
 
 ;;; semantic
 (semantic-mode 1)
 (global-semantic-idle-completions-mode t)
-(global-semantic-decoration-mode t)
-(global-semantic-highlight-func-mode t)
 (global-semantic-show-unmatched-syntax-mode t)
 
 ;;; Swap newline keybindings
@@ -31,4 +30,4 @@
 (setq-default compilation-auto-jump-to-first-error t)
 (add-hook 'prog-mode-hook (lambda () (local-set-key (kbd "C-c c") 'compile)))
 
-(provide 'my-init-misc)
+(provide 'init-misc)
