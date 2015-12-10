@@ -1,5 +1,3 @@
-;;; init-evil
-
 (req-package evil-leader
   :require evil
   :config
@@ -15,9 +13,9 @@
       "x0" 'delete-window
       "xb" 'ido-switch-buffer)))
 
-(req-package evil-nerd-commenter
+(req-package evil-commentary
   :require evil
-  :config (evilnc-default-hotkeys))
+  :config (evil-commentary-mode))
 
 (req-package evil-matchit
   :require evil
@@ -43,6 +41,17 @@
     (evil-snipe-override-mode 1)
     (setq evil-snipe-scope 'whole-visible)
     (setq evil-snipe-repeat-scope 'whole-visible)))
+
+(req-package evil-textobj-anyblock
+  :require evil
+  :config
+  (progn
+    (define-key evil-inner-text-objects-map "b" 'evil-textobj-anyblock-inner-block)
+    (define-key evil-outer-text-objects-map "b" 'evil-textobj-anyblock-a-block)))
+
+(req-package powerline
+  :require evil
+  :config (powerline-default-theme))
 
 (req-package evil
   :config

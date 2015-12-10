@@ -4,9 +4,7 @@
   :config (add-to-list 'company-backends 'company-c-headers))
 
 ;;;; Coq
-(req-package init-coq
-  :require smartparens
-  :config (sp-local-pair 'coq-mode "'" nil))
+(req-package init-coq)
 (req-package company-coq
   :require init-coq)
 
