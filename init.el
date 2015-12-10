@@ -80,8 +80,9 @@
 (req-package smartparens
   :config
   (progn
-    (smartparens-global-mode 1)
-    (add-hook 'emacs-lisp-mode-hook 'smartparens-strict-mode)))
+    (require 'smartparens-config)
+    (smartparens-global-mode t)
+    (sp-pair "'" nil :actions nil)))
 
 (req-package multiple-cursors
   :config
