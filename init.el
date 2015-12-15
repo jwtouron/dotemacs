@@ -1,10 +1,3 @@
-;; TODO
-;; move lang specific down
-;; smartparens open brace
-;; defadvice multiple cursors
-;; lighten theme
-;; recentf in C-x b
-
 (require 'cl) ;; Required by many packages
 
 ;;;; My Functions
@@ -81,8 +74,7 @@
   :config
   (progn
     (require 'smartparens-config)
-    (smartparens-global-mode t)
-    (sp-pair "'" nil :actions nil)))
+    (smartparens-global-mode t)))
 
 (req-package multiple-cursors
   :config
