@@ -32,9 +32,6 @@
 
 ;;;; Packages
 
-(req-package init-evil
-  :init (setq evil-want-C-u-scroll t))
-
 (req-package better-defaults)
 (req-package init-misc :require better-defaults)
 
